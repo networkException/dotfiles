@@ -1,0 +1,40 @@
+**node_modules/**
+
+/home/timeshift
+
+/home/*/.config/*/Code Cache/**
+/home/*/.config/*/GPUCache/**
+/home/*/.config/*/Cache/**
+/home/*/.config/*/CachedData/**
+/home/*/.config/*/CachedExtensionVSIXs/**
+/home/*/.config/*/CachedExtensions/**
+
+/home/*/.var/app/*/cache
+/home/*/.var/app/*/config/*/Code Cache/**
+/home/*/.var/app/*/config/*/GPUCache/**
+/home/*/.var/app/*/config/*/Cache/**
+/home/*/.var/app/*/config/*/CachedData/**
+/home/*/.var/app/*/config/*/CachedExtensionVSIXs/**
+/home/*/.var/app/*/config/*/CachedExtensions/**
+
+/home/*/.config/chromium/Default/Application Cache/**
+/home/*/.config/chromium/Default/Service Worker/CacheStorage/**
+/home/*/.config/chromium/Default/*/Default/Service Worker/CacheStorage/**
+/home/*/.config/chromium/Default/Service Worker/ScriptCache/**
+/home/*/.config/chromium/Default/GPUCache/**
+/home/*/.config/chromium/GrShaderCache/GPUCache/**
+/home/*/.config/chromium/ShaderCache/GPUCache/**
+
+/home/*/.local/share/keybase/kbfs_md_cache/**
+/home/*/.local/share/keybase/kbfs_quota_cache/**
+/home/*/.local/share/keybase/kbfs_sync_cache/**
+/home/*/.local/share/keybase/kbfs_block_cache/**
+
+/home/*/.android
+/home/*/.cache
+/home/*/.gradle
+/home/*/.jdks
+/home/*/.npm
+
+/home/*/.thumbnails
+/home/*/.local/share/Trash
