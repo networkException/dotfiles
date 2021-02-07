@@ -22,7 +22,6 @@ source $ZSH/oh-my-zsh.sh
 
 export LC_ALL=en_US.UTF-8
 
-alias ls="lsd"
 alias cls="clear"
 alias open="xdg-open 2>/dev/null"
 alias o="open"
