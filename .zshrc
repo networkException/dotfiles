@@ -39,7 +39,9 @@ alias gd="git diff"
 alias gp="git push && clear"
 alias gap="git add -p"
 alias cputemp="sensors | grep Core"
+
 alias zshrc="nano $HOME/.zshrc"
+alias zshrc.local="nano $HOME/.zshrc.local"
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
