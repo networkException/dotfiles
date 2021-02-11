@@ -42,6 +42,9 @@ alias cputemp="sensors | grep Core"
 alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
 
+alias up="docker-compose up -d"
+alias down="docker-compose down"
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
