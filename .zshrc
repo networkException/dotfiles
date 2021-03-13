@@ -46,6 +46,7 @@ alias up="sudo docker-compose up -d"
 alias down="sudo docker-compose down"
 alias pull="sudo docker-compose pull"
 alias logs="sudo docker logs --follow"
+alias images="sudo docker images | grep -v REPOSITORY | awk '{print $1}' | xargs -L1 sudo docker pull"
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
