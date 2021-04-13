@@ -38,3 +38,5 @@
 
 /home/*/.thumbnails
 /home/*/.local/share/Trash
+
+/home/*/games
