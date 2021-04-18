@@ -46,8 +46,6 @@ alias up="sudo docker-compose up -d"
 alias down="sudo docker-compose down"
 alias pull="sudo docker-compose pull"
 
-alias permissions="stat -c %a "
-
 function images() { sudo docker images | grep -v REPOSITORY | awk '{print $1}' | xargs -L1 sudo docker pull }
 function logs() {
     if ! [ -z "$1" ]; then
