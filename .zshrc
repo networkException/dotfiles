@@ -37,7 +37,9 @@ alias gs="git status"
 alias gd="git diff"
 alias gp="git push && clear"
 alias gap="git add -p"
+
 alias cputemp="sensors | grep Core"
+alias bottom="btm"
 
 alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
