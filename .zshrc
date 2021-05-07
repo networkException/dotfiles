@@ -38,6 +38,8 @@ alias gd="git diff"
 alias gp="git push && clear"
 alias gap="git add -p"
 
+alias sha="sha256sum"
+
 alias cputemp="sensors | grep Core"
 alias bottom="btm"
 
