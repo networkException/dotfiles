@@ -6,7 +6,7 @@ Name=Ungoogled Chromium
 GenericName=Web Browser
 # Gnome and KDE 3 uses Comment.
 Comment=Access the Internet
-Exec=/usr/bin/chromium --enable-features=WebUIDarkMode --force-dark-mode %U
+Exec=/usr/bin/chromium --enable-features=WebUIDarkMode --force-dark-mode --flag-switches-begin --disable-search-engine-collection --extension-mime-request-handling=always-prompt-for-install --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --keep-old-history --popups-to-tabs --pull-to-refresh=1 --scroll-tabs=never --show-avatar-button=never --enable-features=WebUIDarkMode,CopyLinkToText,HeavyAdIntervention,HeavyAdPrivacyMitigations,TabSearch --disable-features=SharingQRCodeGenerator --flag-switches-end %U
 StartupNotify=true
 Terminal=false
 Icon=chromium
@@ -17,8 +17,8 @@ Actions=new-window;new-private-window;
 
 [Desktop Action new-window]
 Name=New Window
-Exec=/usr/bin/chromium --enable-features=WebUIDarkMode --force-dark-mode
+Exec=/usr/bin/chromium --enable-features=WebUIDarkMode --force-dark-mode --flag-switches-begin --disable-search-engine-collection --extension-mime-request-handling=always-prompt-for-install --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --keep-old-history --popups-to-tabs --pull-to-refresh=1 --scroll-tabs=never --show-avatar-button=never --enable-features=WebUIDarkMode,CopyLinkToText,HeavyAdIntervention,HeavyAdPrivacyMitigations,TabSearch --disable-features=SharingQRCodeGenerator --flag-switches-end
 
 [Desktop Action new-private-window]
 Name=New Incognito Window
-Exec=/usr/bin/chromium --enable-features=WebUIDarkMode --force-dark-mode --incognito
+Exec=/usr/bin/chromium --enable-features=WebUIDarkMode --force-dark-mode --flag-switches-begin --disable-search-engine-collection --extension-mime-request-handling=always-prompt-for-install --fingerprinting-canvas-image-data-noise --fingerprinting-canvas-measuretext-noise --fingerprinting-client-rects-noise --keep-old-history --popups-to-tabs --pull-to-refresh=1 --scroll-tabs=never --show-avatar-button=never --enable-features=WebUIDarkMode,CopyLinkToText,HeavyAdIntervention,HeavyAdPrivacyMitigations,TabSearch --disable-features=SharingQRCodeGenerator --flag-switches-end --incognito
