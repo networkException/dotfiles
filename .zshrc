@@ -46,16 +46,51 @@ alias bottom="btm"
 alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
 
-alias up="sudo docker-compose up -d"
-alias down="sudo docker-compose down"
-alias pull="sudo docker-compose pull"
-
-function images() { sudo docker images | grep -v REPOSITORY | awk '{print $1":"$2}' | xargs -L1 sudo docker pull }
-function logs() {
-    if ! [ -z "$1" ]; then
-        sudo docker logs -ft $1
+function up() {
+    if [[ "$1" == "-d" ]]; then
+        sudo docker-compose up -d
     else
-        sudo docker-compose logs -ft
+        docker-compose -H unix:///run/user/1000/podman/podman.sock up -d
+    fi
+}
+
+function down() {
+    if [[ "$1" == "-d" ]]; then
+        sudo docker-compose down
+    else
+        docker-compose -H unix:///run/user/1000/podman/podman.sock down
+    fi
+}
+
+function pull() {
+    if [[ "$1" == "-d" ]]; then
+        sudo docker-compose pull
+    else
+        docker-compose -H unix:///run/user/1000/podman/podman.sock pull
+    fi
+}
+
+function images() {
+    if [[ "$1" == "-d" ]]; then
+        sudo docker images | grep -v REPOSITORY | awk '{print $1":"$2}' | xargs -L1 sudo docker pull
+    else
+        podman images | grep -v REPOSITORY | awk '{print $1":"$2}' | xargs -L1 podman pull
+    fi
+}
+
+function logs() {
+    if [[ "$1" == "-d" ]]; then
+        if ! [ -z "$2" ]; then
+            sudo docker logs -ft $2
+        else
+            sudo docker-compose logs -ft
+        fi
+    else
+        if ! [ -z "$1" ]; then
+            podman logs -ft $1
+        else
+            docker-compose -H unix:///run/user/1000/podman/podman.sock logs -ft
+        fi
     fi
 }
 
