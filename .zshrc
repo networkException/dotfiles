@@ -4,6 +4,7 @@ fi
 
 export ZSH=$HOME/.oh-my-zsh
 export PATH=$HOME/.local/bin:$PATH
+export TIME_STYLE="+%Y-%m-%d %H:%M:%S"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
