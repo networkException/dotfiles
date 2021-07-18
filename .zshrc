@@ -41,9 +41,7 @@ alias gp="git push && clear"
 alias gap="git add -p"
 
 alias sha="sha256sum"
-
-alias cputemp="sensors | grep Core"
-alias bottom="btm"
+alias ip="ip -color=auto"
 
 alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
