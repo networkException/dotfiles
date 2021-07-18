@@ -35,6 +35,7 @@
 /home/*/.gradle
 /home/*/.jdks
 /home/*/.npm
+/home/*/.wine
 
 /home/*/.thumbnails
 /home/*/.local/share/Trash
