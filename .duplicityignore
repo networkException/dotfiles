@@ -36,6 +36,7 @@
 /home/*/.jdks
 /home/*/.npm
 /home/*/.wine
+/home/*/.cargo
 
 /home/*/.thumbnails
 /home/*/.local/share/Trash
