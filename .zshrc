@@ -26,7 +26,7 @@ export LC_ALL=en_US.UTF-8
 alias cls="clear"
 alias open="xdg-open 2>/dev/null"
 alias o="open"
-alias wget="curl -O --retry 999 --retry-max-time 0 -C -"
+alias wget="curl -L -O --retry 999 --retry-max-time 0 -C -"
 alias du="du -hd 1"
 
 alias clip="maim -s -u | xclip -selection clipboard -t image/png"
