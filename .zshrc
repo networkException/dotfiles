@@ -95,6 +95,25 @@ function logs() {
     fi
 }
 
+rgrep() {
+    if [ "$#" -eq 0 ]; then
+        echo "Usage: $FUNCNAME pattern [options] -- see grep usage"
+        return
+    # one arg - pattern
+    elif [ "$#" -eq 1 ]; then
+        grep -rn "$@" *;
+    # 2 args - flag pattern
+    elif [ "$#" -eq 2 ]; then
+        first=$1
+        shift
+        grep -rn "$first" "$@" *;
+    # more than 2 args
+    else
+        echo "Usage: $FUNCNAME 2+ params not yet supported"
+        return
+    fi
+}
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
