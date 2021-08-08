@@ -27,7 +27,6 @@ alias cls="clear"
 alias open="xdg-open 2>/dev/null"
 alias o="open"
 alias wget="curl -L -O --retry 999 --retry-max-time 0 -C -"
-alias du="du -hd 1"
 
 alias clip="maim -s -u | xclip -selection clipboard -t image/png"
 
@@ -46,6 +45,10 @@ alias ip="ip -color=auto"
 
 alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
+
+function du() {
+    /usr/bin/du -hd 1 "$@" | sort -nr
+}
 
 function up() {
     if [[ "$1" == "-d" ]]; then
