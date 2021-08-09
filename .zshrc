@@ -47,7 +47,7 @@ alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
 
 function du() {
-    /usr/bin/du -hd 1 "$@" | sort -nr
+    /usr/bin/du -hd 1 "$@" | sort -hr
 }
 
 function up() {
