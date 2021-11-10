@@ -120,7 +120,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 # time config
-TIMEFMT=$'\n================\nCPU\t%P\nuser\t%*U\nsystem\t%*S\ntotal\t%*E'
+TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
