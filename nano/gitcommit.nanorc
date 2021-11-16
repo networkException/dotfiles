@@ -1,5 +1,5 @@
 # Derived from https://milianw.de/code-snippets/git-commit-message-highlighting-in-nano.html
-syntax "patch" ".git/COMMIT_EDITMSG$"
+syntax "patch" "\.git/(COMMIT_EDITMSG|TAG_EDITMSG)$"
 
 # overlong lines
 color brightred "^.{72,}.+$"
