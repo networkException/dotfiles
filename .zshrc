@@ -18,9 +18,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Machine specific
-[ -f $HOME/.zshrc.local ] && source  $HOME/.zshrc.local
-
 export LC_ALL=en_US.UTF-8
 
 alias cls="clear"
@@ -130,3 +127,6 @@ setopt inc_append_history
 setopt share_history
 HISTSIZE=5000000
 SAVEHIST=5000000
+
+# Machine specific
+[ -f $HOME/.zshrc.local ] && source  $HOME/.zshrc.local
