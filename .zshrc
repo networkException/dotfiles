@@ -6,7 +6,11 @@ export ZSH=$HOME/.oh-my-zsh
 export PATH=$HOME/.local/bin:$PATH
 export TIME_STYLE="+%Y-%m-%d %H:%M:%S"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# Add to zshrc.local when using oh my zsh
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Add to zshrc.local when using system package
+# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 plugins=(
 	git
