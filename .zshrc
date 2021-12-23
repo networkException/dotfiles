@@ -1,50 +1,57 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+#!/bin/zsh
 
-export ZSH=$HOME/.oh-my-zsh
+export LC_ALL=en_US.UTF-8
+export EDITOR=/usr/bin/nano
+export PAGER=/usr/bin/less
+export LESS=-R
+
 export PATH=$HOME/.local/bin:$PATH
 export TIME_STYLE="+%Y-%m-%d %H:%M:%S"
 
-# Add to zshrc.local when using oh my zsh
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+export HISTFILE=$HOME/.zsh_history
 
-# Add to zshrc.local when using system package
-# source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-plugins=(
-	git
-	z
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	history-substring-search
-)
+source /usr/share/z/z.sh
 
-source $ZSH/oh-my-zsh.sh
-
-export LC_ALL=en_US.UTF-8
+alias l="ls -lah"
+alias ll="ls -lh"
+alias la="ls -lAh"
 
 alias cls="clear"
+
 alias open="xdg-open 2>/dev/null"
 alias o="open"
 
-alias clip="maim -s -u | xclip -selection clipboard -t image/png"
-
+alias ytdl="youtube-dl"
 alias mp3="youtube-dl --extract-audio --audio-format mp3"
 
 alias ts="ts-node"
 alias js="node"
 
-alias gs="git status"
-alias gd="git diff"
-alias gp="git push && clear"
-alias gap="git add -p"
+alias gs="git status"                   # Git Status
+alias gd="git diff"                     # Git Diff
+alias gp="git push && clear"            # Git Push
+alias gap="git add -p"                  # Git Add -P
+alias gl="git log"                      # Git Log
+alias glp="git log -p"                  # Git Log -P
+alias gls="git log --pretty='%s'"       # Git Log Short
+alias glf="git log --name-status"       # Git Log Files
+alias glgpg="git log --show-signature"  # Git Log with GPG signature
+
+alias rgrep="rg"
 
 alias sha="sha256sum"
 alias ip="ip -color=auto"
 
 alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
+
+zstyle ':completion:*' list-colors "${(s.:.)$(dircolors -b)}"
+zstyle ':completion:*' menu select
 
 function du() {
     /usr/bin/du -hd 1 "$@" | sort -hr
@@ -98,27 +105,14 @@ function logs() {
     fi
 }
 
-rgrep() {
-    if [ "$#" -eq 0 ]; then
-        echo "Usage: $FUNCNAME pattern [options] -- see grep usage"
-        return
-    # one arg - pattern
-    elif [ "$#" -eq 1 ]; then
-        grep -rn "$@" *;
-    # 2 args - flag pattern
-    elif [ "$#" -eq 2 ]; then
-        first=$1
-        shift
-        grep -rn "$first" "$@" *;
-    # more than 2 args
-    else
-        echo "Usage: $FUNCNAME 2+ params not yet supported"
-        return
-    fi
-}
+autoload -Uz compinit
+compinit
 
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # time config
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
@@ -128,9 +122,8 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 # Appends every command to the history file once it is executed
 setopt inc_append_history
 # Reloads the history whenever you use it
-setopt share_history
 HISTSIZE=5000000
 SAVEHIST=5000000
 
 # Machine specific
-[ -f $HOME/.zshrc.local ] && source  $HOME/.zshrc.local
+[ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
