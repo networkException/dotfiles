@@ -61,7 +61,7 @@ function up() {
     if [[ "$1" == "-d" ]]; then
         sudo docker-compose up -d
     else
-        docker-compose -H unix:///run/user/1000/podman/podman.sock up -d
+        DOCKER_HOST=unix:///run/user/1000/podman/podman.sock docker-compose up -d
     fi
 }
 
@@ -69,7 +69,7 @@ function down() {
     if [[ "$1" == "-d" ]]; then
         sudo docker-compose down
     else
-        docker-compose -H unix:///run/user/1000/podman/podman.sock down
+        DOCKER_HOST=unix:///run/user/1000/podman/podman.sock docker-compose down
     fi
 }
 
@@ -77,7 +77,7 @@ function pull() {
     if [[ "$1" == "-d" ]]; then
         sudo docker-compose pull
     else
-        docker-compose -H unix:///run/user/1000/podman/podman.sock pull
+        DOCKER_HOST=unix:///run/user/1000/podman/podman.sock docker-compose pull
     fi
 }
 
@@ -100,7 +100,7 @@ function logs() {
         if ! [ -z "$1" ]; then
             podman logs -ft $1
         else
-            docker-compose -H unix:///run/user/1000/podman/podman.sock logs -ft
+            DOCKER_HOST=unix:///run/user/1000/podman/podman.sock docker-compose logs -ft
         fi
     fi
 }
