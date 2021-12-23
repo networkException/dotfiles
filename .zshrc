@@ -34,6 +34,7 @@ alias js="node"
 
 alias gs="git status"                   # Git Status
 alias gd="git diff"                     # Git Diff
+alias gdc="git diff --cached"           # Git Diff Cached
 alias gp="git push && clear"            # Git Push
 alias gap="git add -p"                  # Git Add -P
 alias gl="git log"                      # Git Log
