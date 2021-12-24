@@ -115,6 +115,8 @@ bindkey "^[[B" history-substring-search-down
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
+bindkey "\e[3~" delete-char
+
 # time config
 TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
