@@ -90,6 +90,16 @@ function images() {
     fi
 }
 
+function prune() {
+    if [[ "$1" == "-d" ]]; then
+        yes | sudo docker image prune
+        sudo docker images
+    else
+        yes | podman image prune
+        podman images
+    fi
+}
+
 function logs() {
     if [[ "$1" == "-d" ]]; then
         if ! [ -z "$2" ]; then
