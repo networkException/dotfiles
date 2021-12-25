@@ -122,6 +122,8 @@ compinit
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
+bindkey "${terminfo[kcbt]}" reverse-menu-complete
+
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
