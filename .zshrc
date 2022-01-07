@@ -32,16 +32,16 @@ alias mp3="youtube-dl --extract-audio --audio-format mp3"
 alias ts="ts-node"
 alias js="node"
 
-alias gs="git status"                   # Git Status
-alias gd="git diff"                     # Git Diff
-alias gdc="git diff --cached"           # Git Diff Cached
-alias gp="git push && clear"            # Git Push
-alias gap="git add -p"                  # Git Add -P
-alias gl="git log"                      # Git Log
-alias glp="git log -p"                  # Git Log -P
-alias gls="git log --pretty='%s'"       # Git Log Short
-alias glf="git log --name-status"       # Git Log Files
-alias glgpg="git log --show-signature"  # Git Log with GPG signature
+alias gs="git status"                       # Git Status
+alias gd="git diff"                         # Git Diff
+alias gdc="git diff --cached"               # Git Diff Cached
+alias gp="git push --follow-tags && clear"  # Git Push
+alias gap="git add -p"                      # Git Add -P
+alias gl="git log"                          # Git Log
+alias glp="git log -p"                      # Git Log -P
+alias gls="git log --pretty='%s'"           # Git Log Short
+alias glf="git log --name-status"           # Git Log Files
+alias glgpg="git log --show-signature"      # Git Log with GPG signature
 
 alias rgrep="rg"
 
