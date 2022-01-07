@@ -92,10 +92,10 @@ function images() {
 
 function prune() {
     if [[ "$1" == "-d" ]]; then
-        yes | sudo docker image prune
+        sudo docker image prune --force
         sudo docker images
     else
-        yes | podman image prune
+        podman image prune --force
         podman images
     fi
 }
