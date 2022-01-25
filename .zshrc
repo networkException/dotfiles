@@ -12,6 +12,7 @@ export HISTFILE=$HOME/.zsh_history
 
 export MAKEFLAGS="-j $(grep -c ^processor /proc/cpuinfo)"
 
+# pacman -S zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-syntax-highlighting zsh-theme-powerlevel10k z
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
