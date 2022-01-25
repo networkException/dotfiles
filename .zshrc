@@ -20,6 +20,8 @@ source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring
 
 source /usr/share/z/z.sh
 
+alias ls="$([ -f /usr/bin/lsd ] && echo '/usr/bin/lsd' || echo '/usr/bin/ls' ) --group-dirs=first"
+
 alias l="ls -lah"
 alias ll="ls -lh"
 alias la="ls -lAh"
