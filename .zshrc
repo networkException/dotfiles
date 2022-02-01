@@ -59,6 +59,8 @@ alias zshrc="nano $HOME/.zshrc"
 alias zshrc.local="nano $HOME/.zshrc.local"
 
 zstyle ':completion:*' list-colors "${(s.:.)$(dircolors -b)}"
+zstyle ':completion:*' list-dirs-first true
+zstyle ':completion:*' group-name '' # See https://bbs.archlinux.org/viewtopic.php?id=225303
 zstyle ':completion:*' menu select
 
 function du() {
