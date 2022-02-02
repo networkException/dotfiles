@@ -22,7 +22,7 @@ source /usr/share/z/z.sh
 
 alias ls="$([ -f /usr/bin/lsd ] && echo '/usr/bin/lsd' || echo '/usr/bin/ls' ) --group-dirs=first"
 
-[ -f /usr/bin/bat ] && alias cat="bat"
+[ -f /usr/bin/bat ] && alias cat="bat --show-all"
 
 alias l="ls -lah"
 alias ll="ls -lh"
