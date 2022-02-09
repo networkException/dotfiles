@@ -9,6 +9,8 @@ export PATH=$HOME/.local/bin:$PATH
 export TIME_STYLE="+%Y-%m-%d %H:%M:%S"
 
 export HISTFILE=$HOME/.zsh_history
+export HISTSIZE=999999999
+export SAVEHIST=$HISTSIZE
 
 export MAKEFLAGS="-j $(grep -c ^processor /proc/cpuinfo)"
 
@@ -145,9 +147,6 @@ TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 
 # Appends every command to the history file once it is executed
 setopt inc_append_history
-# Reloads the history whenever you use it
-HISTSIZE=5000000
-SAVEHIST=5000000
 
 # Machine specific
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
