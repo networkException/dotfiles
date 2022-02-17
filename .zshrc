@@ -46,7 +46,7 @@ alias gd="git diff"                         # Git Diff
 alias gdc="git diff --cached"               # Git Diff Cached
 alias gp="git push --follow-tags && clear"  # Git Push
 alias gap="git add -p"                      # Git Add -P
-alias gl="git log"                          # Git Log
+alias gl="git log --stat"                   # Git Log
 alias glp="git log -p"                      # Git Log -P
 alias gls="git log --pretty='%s'"           # Git Log Short
 alias glf="git log --name-status"           # Git Log Files
