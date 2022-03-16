@@ -50,6 +50,7 @@ alias gl="git log --stat"                   # Git Log
 alias glp="git log -p"                      # Git Log -P
 alias gls="git log --pretty='%s'"           # Git Log Short
 alias glf="git log --name-status"           # Git Log Files
+alias glt="git tag -ln"                     # Git Log Tags
 alias glgpg="git log --show-signature"      # Git Log with GPG signature
 
 alias rgrep="rg"
