@@ -108,7 +108,7 @@ function prune() {
         sudo docker images
     else
         podman image prune --force
-        podman images
+        podman images --history
     fi
 }
 
